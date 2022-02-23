@@ -1,0 +1,270 @@
+/* I edited this code to: simplify it and organize it in a cascade format, and to replace multiple CSS class selectors with semantic HTML tags -- Kevin Cole, 02-23-22 */
+
+
+
+/* This first CSS rule sets a universal "border-box" value to the height and width of html elements, being that an html elements height and width measurements include padding and borders. */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/* The next CSS rule sets the background color of the body of the webpage to a very light gray. */
+
+body {
+    background-color: #d9dcd6;
+}
+
+/* The next CSS rule styles the main header of the webpage */
+
+header {
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #2a607c;
+    color: #ffffff;
+}
+/* The next CSS rule sets the font size for the name "Horiseon" in the header */
+
+header h1 {
+    display: inline-block;
+    font-size: 48px;
+} 
+
+/* The next CSS rule sets the font color for the "seo" letters in name "Horiseon" in the main header of the webpage */
+
+header h1 .seo {
+    color: #d9dcd6;
+}
+
+/* The next three (3) CSS rules style the navigation elements in top right corner of webpage */
+/* We need to replace "div's" in these CSS selectors with "nav's" to match replacement of "div's" with "nav's" in HTLM doc */
+
+/* .header div { */
+header nav {
+    padding-top: 15px;
+    margin-right: 20px;
+    float: right;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+ 
+}
+
+/*Not necessary to create a CSS class called "header," can just use html header tag as selector/
+/* .header div ul { */
+header nav ul {
+    list-style-type: none;
+}
+/* change div selector to nav, to match semantic change in html */
+/* .header div ul li { */
+    header nav ul li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+/* The next CSS rule sets the color (very light gray) for the hypertext links in the HTML nav element in upper right corner of webpage */
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* The next CSS rule just sets the font size for the paragraphs */
+
+p {
+    font-size: 16px;
+} 
+
+/* The next CSS rule originally retrieved the main image on the webpage and formated it. I've chosen instead to retrieve the image in HTML using the HTML img tag, for better HTML semantics.  So we need to modify this CSS rule accordingly, starting with changing the selector to img.hero. */
+/* .hero */
+
+img.hero {
+    height: 800px;
+    width: 100%;
+    margin-bottom: 25px;
+    /* background-image: url("../images/digital-marketing-meeting.jpg"); */
+    background-size: cover;
+    background-position: center;
+}
+
+/* No need to create CSS selector called "content," because can use html tag article as CSS selector instead*/
+/* .content { */
+article {
+    width: 75%;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+/* The next CSS rule positions the immages for the "Search Engine Optimization" and "Social Media Marketing" sections of the article. */
+
+.float-left {
+    float: left;
+    margin-right: 25px;
+}
+/* The next CSS rule positions the immage for the "Online Reputation Management" section of the article.  */
+
+.float-right {
+    float: right;
+    margin-left: 25px;
+}
+
+/* .content section { */
+article section {
+    margin-bottom: 20px;
+    padding: 50px;
+    height: 300px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #0072bb;
+    color: #ffffff;
+}
+
+/* The next three (3) CSS rules set the maximum heights of images in the three sections of the article. */
+
+/* .search-engine-optimization img {
+    max-height: 200px;
+}
+
+.online-reputation-management img {
+    max-height: 200px;
+}
+
+.social-media-marketing img {
+    max-height: 200px;
+} */
+
+article section img {
+max-height: 200px;
+}
+
+/* These next CSS rules set the margins and font-sizes for the three headers of the three sections of article. */
+/* I have consolidated these rules into one rule, using html tags as selectors, rather than CSS classes. */
+
+/* .search-engine-optimization h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.online-reputation-management h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+.social-media-marketing h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+} */
+
+article section h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+/* The next series of CSS rules style the webpage's side-bar, about Lead Generation, Brand Awareness, and Cost Management*/
+/* This CSS rule styles the entire side-bar.  I have consolidated the CSS rules and replaced the CSS class selector with the html "aside" tag for semantic simplicity */
+
+/* .benefits { */
+
+aside {   
+    margin-right: 20px;
+    padding: 20px;
+    clear: both;
+    float: right;
+    width: 20%;
+
+    /* change height of side-bar so the bottom border is flush with the bottom border of the article */
+   
+    /* height: 100%; */
+    height: 940px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #2589bd;
+}
+/* The next three (3) CSS rules set the bottom margins and colors for the sidebar sections, entitled "Lead Generation", "Brand Awareness" and "Cost Management" */
+/* I have consolidated them into one CSS rule using semantic HTML tags for selectors, instead of using CSS classes for selectors */
+
+/* .benefit-lead {
+    margin-bottom: 32px;
+    color: #ffffff;
+}
+
+.benefit-brand {
+    margin-bottom: 32px;
+    color: #ffffff;
+}
+
+.benefit-cost {
+    margin-bottom: 32px;
+       color: #ffffff;
+} */
+
+/* .benefits section { */
+aside section {
+    margin-bottom: 32px;
+    color: #ffffff;
+}
+
+
+/* The following three (3) CSS rules center and set the bottom margins of the headers of the side-bar sections. */
+/* I have consolidated them into one CSS rule, using semantic HTML tags as selectors, instead of using CSS classes as selectors */
+
+/* .benefit-lead h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.benefit-brand h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.benefit-cost h3 {
+    margin-bottom: 10px;
+    text-align: center;
+} */
+
+/* .benefits section h3 { */
+   
+aside section h3 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* The next three (3) CSS rules display the images in the side-bar sections in block format, with the given margins and width parameters. */
+/* I have consolidated these three rules into one rule for simplicity, using HTML tags as selectors, instead of using CSS classes as selectors */
+
+/* .benefit-lead img {
+    display: block;
+    margin: 10px auto;  
+    max-width: 150px;
+}
+
+.benefit-brand img {
+    display: block;
+      margin: 10px auto;
+    max-width: 150px;
+}
+
+.benefit-cost img {
+    display: block;
+    margin: 10px auto;
+    max-width: 150px;
+} */
+
+/* .benefits section img { */
+
+aside section img {   
+    display: block;
+    margin: 10px auto;
+    max-width: 150px;
+}
+
+
+/* removed unnecessary CSS ".footer" and used html tag as CSS selector for simpli  */
+footer {
+    padding: 30px;
+    clear: both;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+footer h2 {
+    font-size: 20px;
+}
